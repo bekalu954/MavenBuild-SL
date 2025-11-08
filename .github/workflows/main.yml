@@ -20,9 +20,9 @@ jobs:
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: '13.200.226.198'              # My lab machine IP
-        user: 'labuser'                   # My lab username
-        pass: 'Nuvelabs123$'              # My lab password
+        username: 'labuser'                   # My lab username
+        password: 'Nuvelabs123$'              # My lab password
         port: 22
         connect_timeout: 10s
-        first_ssh: |
+        script: |
           curl -l -u admin:Root123$ http://localhost:8080/job/deployment-pipeline/build?token=token1
