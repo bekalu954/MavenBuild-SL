@@ -17,9 +17,9 @@ jobs:
     - name: Build the code
       run: mvn package
     - name: Connect to Lab machine and trigger a Jenkins job
-      uses: appleboy/ssh-action@v1.0.0
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
-        host: ' 13.200.226.198'              # My lab machine IP
+        host: '13.200.226.198'              # My lab machine IP
         user: 'labuser'                   # My lab username
         pass: 'Nuvelabs123$'              # My lab password
         port: 22
